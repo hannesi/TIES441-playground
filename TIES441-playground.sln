@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerSourceExample", "Power
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverExample", "ObserverExample\ObserverExample.csproj", "{CD3C2AB7-FA76-4E4F-89BD-E0BF1CCE0C43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tehdastelu", "Tehdastelu\Tehdastelu.csproj", "{7574F59E-B392-403F-9522-E97F741B6C2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palvelu", "Palvelu\Palvelu.csproj", "{762D3634-77B9-472D-BC78-347622AD4739}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{CD3C2AB7-FA76-4E4F-89BD-E0BF1CCE0C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD3C2AB7-FA76-4E4F-89BD-E0BF1CCE0C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD3C2AB7-FA76-4E4F-89BD-E0BF1CCE0C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7574F59E-B392-403F-9522-E97F741B6C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7574F59E-B392-403F-9522-E97F741B6C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7574F59E-B392-403F-9522-E97F741B6C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7574F59E-B392-403F-9522-E97F741B6C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{762D3634-77B9-472D-BC78-347622AD4739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762D3634-77B9-472D-BC78-347622AD4739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762D3634-77B9-472D-BC78-347622AD4739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762D3634-77B9-472D-BC78-347622AD4739}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
