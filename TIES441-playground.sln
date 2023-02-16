@@ -32,16 +32,9 @@ Global
 		{762D3634-77B9-472D-BC78-347622AD4739}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{762D3634-77B9-472D-BC78-347622AD4739}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{762D3634-77B9-472D-BC78-347622AD4739}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-		{D9BF13DC-5240-4229-A89D-BE73F20E9561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9BF13DC-5240-4229-A89D-BE73F20E9561}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9BF13DC-5240-4229-A89D-BE73F20E9561}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9BF13DC-5240-4229-A89D-BE73F20E9561}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
 		{95898CBD-5476-4E5D-9E75-E300493009E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95898CBD-5476-4E5D-9E75-E300493009E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95898CBD-5476-4E5D-9E75-E300493009E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95898CBD-5476-4E5D-9E75-E300493009E9}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> 4f6aa8762c2802befdc0bdbabd9a5322ef3e4b5f
 	EndGlobalSection
 EndGlobal
