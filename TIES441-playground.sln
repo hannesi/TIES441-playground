@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palvelu", "Palvelu\Palvelu.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunTimesItemCraftingNetwork", "FunTimesItemCraftingNetwork\FunTimesItemCraftingNetwork.csproj", "{95898CBD-5476-4E5D-9E75-E300493009E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tietoverkko", "Tietoverkko\Tietoverkko.csproj", "{85386EE9-EC2A-4697-AD6D-421950CDC338}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{95898CBD-5476-4E5D-9E75-E300493009E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95898CBD-5476-4E5D-9E75-E300493009E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95898CBD-5476-4E5D-9E75-E300493009E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85386EE9-EC2A-4697-AD6D-421950CDC338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85386EE9-EC2A-4697-AD6D-421950CDC338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85386EE9-EC2A-4697-AD6D-421950CDC338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85386EE9-EC2A-4697-AD6D-421950CDC338}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
