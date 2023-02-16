@@ -1,11 +1,24 @@
-﻿using Tietoverkko;
+﻿using System.Text;
+using Tietoverkko;
 using OperatingSystem = Tietoverkko.OperatingSystem;
 
 var acme = new Acme();
 var bonc = new Bonc();
 var fedora = new OperatingSystem("Fedora", acme);
 fedora.ReceiveDataFromNetwork();
+fedora.ConnectNetwork();
+fedora.ReceiveDataFromNetwork();
+fedora.SendDataToNetwork();
+fedora.DisconnectNetwork();
+fedora.ReceiveDataFromNetwork();
+
+Console.WriteLine("====SWAP TO BONC====");
 fedora.SetNetworkModule(bonc);
+fedora.ReceiveDataFromNetwork();
+fedora.ConnectNetwork();
+fedora.ReceiveDataFromNetwork();
+fedora.SendDataToNetwork();
+fedora.DisconnectNetwork();
 fedora.ReceiveDataFromNetwork();
 
 namespace Tietoverkko
@@ -18,35 +31,72 @@ namespace Tietoverkko
         string ReceiveData();
     }
 
+    internal interface IPekanIhanItseKeksimaOmaTietoverkkoModuuliStandardi
+    {
+        void SetConnectionOpen(bool state);
+        void Communicate(byte[] data, bool readFlag);
+    }
+
+    internal class PekanModuuli : IPekanIhanItseKeksimaOmaTietoverkkoModuuliStandardi
+    {
+        private bool _connectionState = false;
+        public void SetConnectionOpen(bool state)
+        {
+            _connectionState = state;
+        }
+
+        public void Communicate(byte[] data, bool readFlag)
+        {
+            if (!_connectionState)
+            {
+                Console.WriteLine("Yhteys muodostamati. T. Pekka");
+                return;
+            }
+            
+            if (readFlag)
+            {
+                var message = Encoding.UTF8.GetBytes("Pekalta terveisiä");
+                var dataCap = Math.Min(data.Length, message.Length);
+                for (var i = 0; i < dataCap; i++)
+                {
+                    data[i] = message[i];
+                }
+            }
+            else
+            {
+                    Console.WriteLine(
+                        $"Pekan moduuli lähetteleepi dataa tietoverkkoon: {Encoding.UTF8.GetString(data)}");
+            }
+        }
+    }
+
     internal class Acme : INetworkModule
     {
-        private bool _connectionStatus = false;
+        private IPekanIhanItseKeksimaOmaTietoverkkoModuuliStandardi _actualNetworkModule = new PekanModuuli();
 
         public void Connect()
         {
-            _connectionStatus = true;
+            _actualNetworkModule.SetConnectionOpen(true);
         }
 
         public void Disconnect()
         {
-            _connectionStatus = false;
+            _actualNetworkModule.SetConnectionOpen(false);
         }
 
         public void SendData(string data)
         {
-            if (_connectionStatus)
-            {
-                Console.WriteLine("Sending data through Acme");
-            }
-            else
-            {
-                Console.WriteLine("Acme is not connected to a network.");
-            }
+            Console.WriteLine("Sending data through Acme");
+            var byteData = Encoding.UTF8.GetBytes(data);
+            _actualNetworkModule.Communicate(byteData, false);
         }
 
         public string ReceiveData()
         {
-            return _connectionStatus ? "Data from Acme" : "";
+            Console.WriteLine("Receiving data from Acme");
+            var byteData = new byte[1024];
+            _actualNetworkModule.Communicate(byteData, true);
+            return Encoding.UTF8.GetString(byteData);
         }
     }
 
@@ -102,5 +152,14 @@ namespace Tietoverkko
         {
             Console.WriteLine($"{_name} received data from network: {_networkModule?.ReceiveData()}");
         }
+
+        public void SendDataToNetwork()
+        {
+            _networkModule?.SendData($"This data was sent from a {_name} operating system");
+        }
+
+        public void ConnectNetwork() => _networkModule?.Connect();
+
+        public void DisconnectNetwork() => _networkModule?.Disconnect();
     }
 }
