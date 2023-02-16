@@ -116,14 +116,7 @@ namespace Tietoverkko
 
         public void SendData(string data)
         {
-            if (_konnekshunShtaytus)
-            {
-                Console.WriteLine("Sending data through Bonc");
-            }
-            else
-            {
-                Console.WriteLine("Bonc is not connected");
-            }
+            Console.WriteLine(_konnekshunShtaytus ? "Sending data through Bonc" : "Bonc is not connected");
         }
 
         public string ReceiveData()
