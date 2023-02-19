@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunTimesItemCraftingNetwork
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tietoverkko", "Tietoverkko\Tietoverkko.csproj", "{85386EE9-EC2A-4697-AD6D-421950CDC338}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RekursiokoosteShakkiavaukset", "RekursiokoosteShakkiavaukset\RekursiokoosteShakkiavaukset.csproj", "{850DCE78-9043-4E6C-83E9-13666D853AAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{85386EE9-EC2A-4697-AD6D-421950CDC338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85386EE9-EC2A-4697-AD6D-421950CDC338}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85386EE9-EC2A-4697-AD6D-421950CDC338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{850DCE78-9043-4E6C-83E9-13666D853AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{850DCE78-9043-4E6C-83E9-13666D853AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{850DCE78-9043-4E6C-83E9-13666D853AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{850DCE78-9043-4E6C-83E9-13666D853AAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
