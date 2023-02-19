@@ -41,10 +41,10 @@ class Move
     {
         writer.WriteLine($"{GetMoveString(_moveNotation, writer.Indent)} ({_eco}) {_openingName}");
         writer.Indent++;
-            foreach (var child in _children)
-            {
-                child.Operation(writer);
-            }
+        foreach (var child in _children)
+        {
+            child.Operation(writer);
+        }
         writer.Indent--;
     }
 
